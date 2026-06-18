@@ -6,7 +6,7 @@ in
   programs.neovim = {
     enable = true; 
     # Enable sideloading `init.lua` (useful if you want to manage your own configuration imperatively)
-    sideloadInitLua = true;
+    # sideloadInitLua = true;
     package = neovim-nightly;
 		viAlias = true;
 		vimAlias = true;
