@@ -158,25 +158,25 @@ in
 	# Enable Docker
   # Source: https://wiki.nixos.org/wiki/Docker
   # Fix: https://discourse.nixos.org/t/rootless-docker-broken-unit-docker-service-not-found/65112/12
-	virtualisation.docker = {
-    enable = false;
+	# virtualisation.docker = {
+  #   enable = false;
     
-    # Periodically run `docker system prune -f` to remove dangling Docker resources
-    autoPrune = {
-      enable = true;
-      dates = "weekly";
-    };
+  #   # Periodically run `docker system prune -f` to remove dangling Docker resources
+  #   autoPrune = {
+  #     enable = true;
+  #     dates = "weekly";
+  #   };
 
-    rootless = {
-      enable = true;
-      setSocketVariable = true;
-      daemon.settings = {
-        data-root = "/mnt/ssd/docker";
-        # features.cdi = true; # Enable Nvidia CDI (GPU)
-      };
-    };
+  #   rootless = {
+  #     enable = true;
+  #     setSocketVariable = true;
+  #     daemon.settings = {
+  #       data-root = "/mnt/ssd/docker";
+  #       # features.cdi = true; # Enable Nvidia CDI (GPU)
+  #     };
+  #   };
 
-  };
+  # };
 
 	# Needed for Docker to communicate with the gpu
 	# hardware.nvidia-container-toolkit.enable = true;
