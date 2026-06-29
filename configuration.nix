@@ -6,6 +6,7 @@
 
 let
 	nixvirt = inputs.nixvirt;
+  secondaryDrive = "h";
 in
 {
   imports =
